@@ -49,11 +49,11 @@ uint32_t SerialSBUS::sendRCFrame(bool frameAvailable, uint32_t *channelData)
         PackedRCdataOut.ch1 = channelData[1];
         PackedRCdataOut.ch2 = channelData[2];
         PackedRCdataOut.ch3 = channelData[3];
-        PackedRCdataOut.ch4 = channelData[4];
+        PackedRCdataOut.ch4 = channelData[8]; // Aux1 from channel 9
         PackedRCdataOut.ch5 = channelData[5];
         PackedRCdataOut.ch6 = channelData[6];
         PackedRCdataOut.ch7 = channelData[7];
-        PackedRCdataOut.ch8 = channelData[8];
+        PackedRCdataOut.ch8 = channelData[4]; // ELRS arm moved to channel 9
         PackedRCdataOut.ch9 = channelData[9];
         PackedRCdataOut.ch10 = channelData[10];
         PackedRCdataOut.ch11 = channelData[11];
